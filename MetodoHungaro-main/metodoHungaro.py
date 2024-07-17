@@ -435,7 +435,7 @@ def resolver_asignacion(df,df_original):
     for fila, columna in zip(filas_asignadas, columnas_asignadas):
         print(f"Fila {df.index[fila]}, Columna {df.columns[columna]}: {costos[fila, columna]}")
         cost_sum += df_original.at[df_original.index[fila],df_original.columns[columna]]
-    print("El costo mínimo de asignación es: ",cost_sum)
+    print("El costo minimizacion de asignación es: ",cost_sum)
 
 def menu():
 
@@ -454,10 +454,10 @@ def menu():
                     menu()
 
                 # Solicitar al usuario los nombres de las columnas
-                columnas = input("Ingrese los nombres de las columnas separados por comas: ").split(',')
+                columnas = input("Ingrese los nombres de las filas separados por comas: ").split(',')
 
                 # Solicitar al usuario los nombres de las filas
-                filas = input("Ingrese los nombres de las filas separados por comas: ").split(',')
+                filas = input("Ingrese los nombres de las columnas separados por comas: ").split(',')
                 print()
 
                 # Crear un DataFrame vacío con los nombres de las columnas y filas proporcionados
